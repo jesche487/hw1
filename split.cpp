@@ -16,9 +16,25 @@ the function below should be the only one in this file.
 
 void split(Node*& in, Node*& odds, Node*& evens)
 {
-  /* Add code here */
 // WRITE YOUR CODE HERE
-
+  //If in is NULL, odds and evens are complete
+  if(in == NULL) return;
+  //If in is even, have evens equal current node
+  //and point to NULL to not have the rest of the list
+  else if(in->value % 2 == 0) {
+    evens = in;
+    in = in->next;
+    evens->next = NULL;
+    split(in, odds, evens->next);
+  }
+  //Same logic as above but for odd nums
+  else if (in->value % 2 == 1) {
+    odds = in;
+    in = in->next;
+    odds->next = NULL;
+    split(in, odds->next, evens);
+  }
+  
 }
 
 /* If you needed a helper function, write it here */
