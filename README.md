@@ -15,4 +15,6 @@ index element in the list.
 To run the homework, please run
 ` g++ -g -Wall ulliststr.cpp ulliststr_test.cpp -o ulliststr_test `
 
- 
+The outputs for ulliststr_test.cpp are explained with comments
+in the code. It tests all the cases of the functions written in 
+ulliststr.cpp

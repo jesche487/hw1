@@ -1,0 +1,6 @@
+.clang-format
+.clang-tidy
+split
+split.o
+ulliststr_test
+valgrind.rpt
